@@ -45,10 +45,12 @@ class Paddle {
         this.downKey = downKey;
     }
 
-    renderPaddle(context) {
-        context.fillRect(this.paddlePosition[0], this.paddlePosition[1], 10, 100);
+    renderPaddle(context, width, height) {
+        context.fillRect(this.paddlePosition[0], this.paddlePosition[1], width, height);
         context.fillStyle = 'white';
         context.fill();
+        this.height = height;
+        this.width = width;
     }
 
     moveDown(canvas) {
